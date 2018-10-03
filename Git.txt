@@ -1,0 +1,15 @@
+
+1) Initialise Directory with "git init"
+
+2) Add file to index with "git add [FILE]"
+    Can add all files in directory with "git add ."
+
+3) Save with "git commit -m 'comment' "
+
+
+log                      = Display history of commits
+reset --hard             = Dismiss all modifications (ONLY IF NOT COMMITED YET)
+commit -a -m             = Add all indexed files if any changes
+checkout [SHA]           = backup anterior version of commit
+checkout master          = restore last version of restored commit
+commit --amend -m "text" = Modify last commit comment

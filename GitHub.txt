@@ -1,0 +1,12 @@
+
+1) git clone [LINK] = Clone a repository on your machine
+
+
+2) git push origin master = Upload to branch 'master', on the remote: 'origin' (GitHub)
+
+3) git pull origin master = Download last modifications from branch 'master' from the remote: 'origin' (GitHub)
+
+
+issues        = Exchange and Report issues on code
+gists         = Share frames of code online
+pull requests = Request modifications on code that you don't own

@@ -1,0 +1,224 @@
+Link HTML file and CSS file:
+     <link rel="stylesheet" type="text/css" href="[CSS FILE]" />
+===============================================================================
+tag {
+      propriety1: value1;
+      propriety2: value2;
+}
+
+         /* [TEXT] */  = Comment
+===============================================================================
+
+========================================================================================================================
+        SELECTORS
+------------------------------------------------------------------------------------------------------------------------
+.example                = Set rules to items that belong to class (class example here)
+#example                = Set rules to item (ID)
+*                       = Set rules to all tags
+TAG1 TAG2               = Set rules to all tags [TAG1] that are into a [TAG2]
+TAG1 + TAG2             = Set rules to the first tag after [A]
+TAG[attribute]          = Set rules to all  tags that have the specified attribute
+TAG[attribute="value"]  = Set rules to all tags that have the specified attribute AND the EXACT specified value
+TAG[attribute*="value"] = Set rules to all tags that have the specified attribute AND the specified value but anywhere
+=======================================================================================================================
+
+
+=====================================================================
+        CLASS & ID
+---------------------------------------------------------------------
+<[TAG] class="example"> </[TAG]> = set a class to a tag (for css)
+<[TAG] id="example">             = set ID to a tag (must be unique)
+=====================================================================
+
+
+=========================================================
+        SPAN & DIV
+---------------------------------------------------------
+<span> </span>  = Select only certain word (inline tag)
+<div>  </div>   = Select whole block text (block tag)
+=========================================================
+
+
+=====================================================================
+        FORMAT TEXT
+---------------------------------------------------------------------
+font size: xx-small;
+           x-small;
+           small;
+           medium;
+           large;
+           x-large;
+           xx-large;
+
+   Use unity "em" to manage font-size easier ! (1em is default size)
+=====================================================================
+
+
+==========================================================================================================
+        POLICY
+----------------------------------------------------------------------------------------------------------
+font-family: policy1, policy2, policy3;
+
+         Common policies:  - Arial
+                      - Arial Black
+                      - Comic Sans MS
+                      - Courier New
+                      - Georgia
+                      - Impact
+                      - Times New Roman
+                      - Trebuchet MS
+                      - Veranda
+
+         Policies Files:
+                            .ttf  : TrueType Font        => Works on IE9 and all browsers
+                            .eot  : Embedded OpenType    => Works on IE ONLY
+                            .otf  : OpenType Font        => Doesn't work on IE
+                            .svg  : SVG Font             => Only font recognised by iPhone & Ipad atm
+                            .woff : Web Open Font Format => Works on ALL browsers
+
+
+   To define new policy:
+                            @font-face{
+                                      font-family:'MyNewPolicy';
+                                      src: url('MyNewPolicy.ttf');
+                            }
+============================================================================================================
+
+
+=============================================================================================
+        ITALIC, BOLD, UNDERLINE...
+---------------------------------------------------------------------------------------------
+font-style: italic;            (set text as italic)
+            oblique [Xdeg];    (set text as italic but can define orientation on degrees)
+            normal;            (set text as default)
+
+font-weight: bold;             (set text as bold)
+             normal;           (set text as default)
+
+font-decoration: underline;    (underline text)
+                 line-through; (cross text)
+                 overline;     (line on top of text)
+                 blink;        (blink text) Doesn't work on all browsers
+                 none;         (default)
+=============================================================================================
+
+
+======================
+        ALIGN
+----------------------
+text-align: left;
+            center;
+            right;
+            justify
+=======================
+
+
+============================================================
+        FLOATS
+------------------------------------------------------------
+float: left;
+       right;
+
+clear: left;  (continues text below a "float: left;")
+       right; (continues text below a "float: right;")
+       both;  (continues text below a "float: left/right;")
+=============================================================
+
+
+================================================================================================================
+        COLOURS & BACKGROUND
+---------------------------------------------------------------------------------------------------------------
+color: example;           (Change text color)
+       #FFFFFF;           (hexadecimal)
+       rgb (250,96,204);  (Red Green Blue)
+
+background-color: rgb(250,96,204);    = Change background color, apply to body to change full background)
+
+background-image: url("example.jpg"); = Defines an image as background
+
+background-attachement: fixed;        = Set background image as fixed and won't follow text (default = scroll)
+background-repeat: no-repeat;         = Don't repeat
+                   repeat-x;          = Repeat on first line (horizontally)
+                   repeat-y;          = Repeat on first column (vertically)
+                   repeat;            = Mosaic
+
+background-position: top-right;       = Choose position of the background
+
+
+opacity: 1;           (Set opacity of element, 0 to 1)
+rgba (255,0,0,0.7);   (Set opacity whith rgb colour (Third value))
+====================================================================================================================
+
+
+====================================================
+        BORDERS & SHADOWS
+---------------------------------------------------
+                                    BORDERS
+                                  -------------
+border: NBpx [COLOR] solid;      = Set a style of border
+                     dotted;
+                     dashed;
+                     double;
+                     groove;
+                     ridge;
+                     inset;
+                     outset;
+
+border-top:                       = Set a place for the border
+      -bottom:
+      -left:
+      -right:
+               border-top-width:       = Set width for top border
+               border-top-color:       = Set clour for top border
+               Use to configure specific borders
+
+border-radius: NBpx               = Create a rounded border
+               border-radius: NBpx NBpx NBpx NBpx;         = Set angle for rounded border. (corners: 1. top left
+                                                                                                      2. top right
+                                                                                                      3. bottom right
+                                                                                                      4. bottom left
+
+                                  SHADOWS
+                                ----------
+box-shadow: NBpx NBpx NBpx black inset;         = Set shadow for box. (1. Horizontal
+                                                                 2. Vertical
+                                                                 3. "ADOUCICEMENT DE L'OMBRE"
+                                                                 4. Colour )
+                                                                 5. place shadow  inside (facultative)
+
+
+text-shadow: NBpx NBpx NBpx black;               = Set shadow for text (Values are same as for box-shadow)
+=============================================================================================================================
+
+
+==============================================================================================================================
+        HOVER SELECTORS
+--------------------------------------
+TAG:hover      = Set rules when you mouse over them
+a:hover        = Set rules for links when mouse is over it
+a:visited      = Set rules for visited links
+TAG:active     = Set rules for element when you click on it
+tag:focus      = Set rules for selected element that has focus (allowed on elements that accept keyboard events or other user inputs)
+======================================================================================================================================================
+
+===========================================================================
+        BOXES
+-------------------------------------------------------
+ As default, a block takes whole width
+  width:                    = Set width
+  min-width:                = Set MINIMUM width
+  max-width:                = Set MAXIMUM width
+  height:                   = set height
+  min-height:               = Set MINIMUM height
+  max-height:               = Set MAXIMUM height
+
+margin: 2px 0 3px 1px;  = Set rules for margin (top, right, bottom, left)
+margin: auto;           = Center block on the page (MUST APPLY A WIDTH TO BLOCK !!!!!)
+
+overflow: -visible (default) = text will get out of the box
+          -hidden            = text will be cut
+          -auto              = navigator will choose what to do
+          -scroll            = navigator will add scrolling bars into the box
+
+word-wrap: break-word;       = Force to go to the line even for a long word
+======================================================================================================================================================

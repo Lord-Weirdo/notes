@@ -1,0 +1,120 @@
+ <tag attribute="value">
+          ex: <image name="photo.jpg" />
+
+<title> </title>  = Displays title of the page in the navigation bar
+<p>     </p>      = Paragraph
+<br />            = Go the the line
+
+
+=================================================================================
+        TITLES
+---------------------------------------------------------------------------------------
+ <h1> </h1>  = Major titles
+ <h2> </h2>  = head
+ <h3> </h3>  = Subhead
+  <h4> </h4>  = Less important title
+  <h5> </h5>  = Not important title
+  <h6> </h6>  = Meaningless title
+
+  By the way, remember that you don't choose title tag by size !
+  Structure your page and use title tags by hierarchy of informations;
+    For example, there shouldn't be Subhead without head, no matter the size of them.
+=======================================================================================
+
+
+==================================================================================
+        ENHANCEMENT
+------------------------------------------------------------------------------
+<em>     </em>      = enhancement         (default = italic)
+<strong> </strong>  = strong enhancement  (default = bold)
+<mark>   </mark>    = marks text          (default = highlight text)
+======================================================================================
+
+
+===========================
+        LISTS
+---------------------------
+<ul> </ul>  = Unordered List
+<ol> </ol>  = Ordered List
+<li> </li>  = Element of the List
+
+      example:  <[LIST TAG]>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                            <li>Element 3</li>
+                </[LIST TAG]>
+
+     There's also a third kind of list: Description List
+
+<dl> </dl>  = Description List
+<dt> </dt>  = Term  (Description Term)
+<dd> </dd>  = Value (Description Data)
+
+      example:  <dl>
+                    <dt>Name1</dt>
+                    <dd>Value that applies to Name1</dd>
+                    <dt>Name2</dt>
+                    <dt>Name3</dt>
+                    <dd>Value that applies to Name1 and Name2</dd>
+                    <dt>Name4</dt>
+                    <dd>One value that applies to Name4</dd>
+                    <dd>Another value that applies to Name4</dd>
+                </dl>
+========================================================================================
+
+
+=============================================================================================================
+        LINKS
+-------------------------------------------------------------------------------------------------------------
+<a href="https://example.com">          </a>  = absolute link
+<a href="example.html">                 </a>  = link to same directory
+<h2 id="example">[TITLE]                </h2> = create anchor (works with all tags, and ID must be unique)
+<a href="#example">                     </a>  = anchor link
+<a href="example.html#anchor"           </a>  = goto anchor on another page
+<a href="example.html" title="tip">     </a>  = Display tooltip on link
+<a href="example.html" target="_blank"> </a>  = open link in a new tab
+<a href="mailto:email@example.com">     </a>  = link to send email
+<a href="myfile.zip">                   </a>  = directly download file
+
+       If your link got "&", you have to replace "&" by "&amp"
+===============================================================================================================
+
+
+=========================================================================================
+        IMAGES
+-------------------------------------------------------------------------------------------
+JPEG          = Photography
+PNG (8 bit)   = Low colours image (-256)
+PNG (24 bits) = High colours image
+GIF           = Animated pic
+
+<img src="example/example.png" alt="an example" />  = Insert picture
+   Pictures HAVE TO be in a paragraph
+
+<img src="example/example.png" alt="an example" title="tooltip" />  = Tooltip on picture
+<a href="example.jpg"><img src="example_mini.jpg" alt"[]"> </a>     = Clickable picture
+
+<figure> </figure>          = Set element as figure
+<figcaption> </figcaption>  = Caption figure
+   Figures DON'T HAVE TO belong to a Paragraph
+=======================================================================================
+
+==============================================================================
+        STRUCTURATION TAGS (BOXES)
+-----------------------------------------------------------------------------
+<header>  </header>    = header
+<footer>  </footer>    = footer
+<nav>     </nav>       = navigation
+<section> </section>   = section of a page
+<aside>   </aside>     = complementary informations
+<article> </article>   = independant articles
+===============================================================================
+        CSS
+--------------------------------------------------------------------------------
+<[TAG] class="example"> </[TAG]> = set a class to a tag (for css)
+<[TAG] id="example">             = set ID to a tag (must be unique)
+
+<span> </span>  = Select only certain word (inline tag)
+<div>  </div>   = Select whole block text (block tag)
+             blocks take all large space
+             inline are just on a line
